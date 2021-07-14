@@ -4,7 +4,7 @@
 import React from 'react';
 import Flat from './flat';
 
-const FlatList = ({ flats }) => {
+const FlatList = ({ flats, setCenter }) => {
   return (
     <div className="flat-list">
       {flats.map((flat) => {
@@ -15,6 +15,9 @@ const FlatList = ({ flats }) => {
             price={flat.price}
             priceCur={flat.priceCurrency}
             key={flat.name}
+            lat={flat.lat}
+            lng={flat.lng}
+            setCenter={setCenter}
             />
           );
       })}

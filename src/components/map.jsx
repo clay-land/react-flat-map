@@ -6,13 +6,13 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './marker';
 
 
-const Map = ({ flats }) => {
+const Map = ({ flats, center }) => {
   return (
     <div className="map-container">
         <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}
-        defaultCenter={{ lat: flats[0].lat, lng: flats[0].lng }}
-        defaultZoom={13}
+        center={center}
+        defaultZoom={14}
         >
         {flats.map((flat) => {
             return (
