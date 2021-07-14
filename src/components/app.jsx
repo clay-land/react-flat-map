@@ -18,7 +18,7 @@ class App extends React.Component {
         return (
             <div>
               <FlatList flats={this.state.flatsData} />
-              <Map />
+              <Map flats={this.state.flatsData}/>
             </div>
           );
     }

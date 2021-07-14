@@ -6,8 +6,7 @@ import Flat from './flat';
 
 const FlatList = ({ flats }) => {
   return (
-    <div>
-    {console.log(flats)}
+    <div className="flat-list">
       {flats.map((flat) => {
           return (
             <Flat
@@ -15,6 +14,7 @@ const FlatList = ({ flats }) => {
             imageURL={flat.imageUrl}
             price={flat.price}
             priceCur={flat.priceCurrency}
+            key={flat.name}
             />
           );
       })}
