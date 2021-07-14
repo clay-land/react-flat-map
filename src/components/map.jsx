@@ -16,7 +16,7 @@ const Map = ({ flats, center }) => {
         >
         {flats.map((flat) => {
             return (
-                <Marker lat={flat.lat} lng={flat.lng} key={flat.name} />
+                <Marker lat={flat.lat} lng={flat.lng} key={flat.name} selected={flat.lat === center.lat && flat.lng === center.lng} />
             );
         })}
         </GoogleMapReact>

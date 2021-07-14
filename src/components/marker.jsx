@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Marker = () => {
+const Marker = ({ selected }) => {
   return (
-    <div className="marker" />
+    <div className={`marker${selected ? " selected" : ""}`} />
   );
 };
 
